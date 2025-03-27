@@ -1,3 +1,5 @@
+from fileinput import close
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
@@ -9,10 +11,27 @@ browser.implicitly_wait(3)
 
 browser.get("https://omsk.hh.ru/")
 
+from dataclasses import dataclass
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+
+
+@dataclass
+class Xpath:
+    BUTTON_INPUT = (By.XPATH, '//a[@data-qa="login"]')
+
+
 time.sleep(5)
 ## Вход
-button_input = browser.find_element(By.XPATH, '//a[@data-qa="login"]') ## Кнопка ВХОД
+
+button_input = WebDriverWait(browser,30).until(EC.element_to_be_clickable(Xpath.BUTTON_INPUT))
 button_input.click()
+# print(browser.find_element(By.ID, 'result').text)
+
+# button_input = browser.find_element(By.XPATH, '//a[@data-qa="login"]') ## Кнопка ВХОД
+# button_input.click()
+
+
 time.sleep(5)
 button_input_password = browser.find_element(By.XPATH, '//span[@data-qa="expand-login-by-password-text"]') ## Кнопка "Вход по паролю"
 button_input_password.click()
