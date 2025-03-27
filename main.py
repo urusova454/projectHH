@@ -31,4 +31,10 @@ time.sleep(3)
 button_advanced_search = browser.find_element(By.XPATH, '//*[@aria-label="Расширенный поиск"]')
 button_advanced_search.click()
 time.sleep(3)
+
+
+
+
+
+
 browser.close()
