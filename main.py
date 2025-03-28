@@ -1,40 +1,36 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
+
 import time
-from settings import LOGIN, PASSWORD
+from src.settings import LOGIN, PASSWORD, HH_URL
+from src.selectors.xpath import Xpath
+from src.browsers.chrome import Chrome
 
-browser = webdriver.Chrome() # Открытие браузера
-browser.maximize_window() # Открытие окна браузера на весь экран
-browser.implicitly_wait(3)
+def main():
+    browser = Chrome()
+    browser.get(HH_URL)
+    browser.max_window()
+    browser.delay_browser()
 
-browser.get("https://omsk.hh.ru/")
+    browser.click_element(Xpath.BUTTON_INPUT)
+    browser.click_element(Xpath.BUTTON_INPUT_PASSWORD)
+    browser.sends_keys(Xpath.WINDOW_LOGIN,LOGIN)
+    browser.sends_keys(Xpath.WINDOW_PASSWORD,PASSWORD)
+    browser.click_element(Xpath.BUTTON_INPUT_IN_LK)
+    browser.click_element(Xpath.BUTTON_ADVANCED_SEARCH)
+    browser.sends_keys(Xpath.WINDOW_PROF_OR_POST, "python")
+    browser.click_element_scroll(Xpath.BUTTON_CLOSE_REGION)
+    browser.sends_keys_scroll(Xpath.WINDOW_INCOME, "90000")
+    browser.click_element_scroll_for_mark_remote(Xpath.MARK_REMOTE)
+    browser.click_element(Xpath.BUTTON_FIND)
+    time.sleep(7)
 
-time.sleep(5)
-## Вход
-button_input = browser.find_element(By.XPATH, '//a[@data-qa="login"]') ## Кнопка ВХОД
-button_input.click()
-time.sleep(5)
-button_input_password = browser.find_element(By.XPATH, '//span[@data-qa="expand-login-by-password-text"]') ## Кнопка "Вход по паролю"
-button_input_password.click()
-window_login = browser.find_element(By.XPATH, '//input[@data-qa="login-input-username"]') ## Окно Логина
-window_login.clear()
-window_login.send_keys(LOGIN) ## Ввод Логина
-window_password = browser.find_element(By.XPATH, '//input[@data-qa="login-input-password"]') ## Окно пароля
-window_login.clear()
-window_password.send_keys(PASSWORD) ## Ввод пароля
-button_input_in_elk = browser.find_element(By.XPATH, '//button[@data-qa="account-login-submit"]') ## Кнопка вход в ЛК
-button_input_in_elk.click()
-time.sleep(3)
-####
+if __name__ == "__main__":
+    main()
 
-## Настройки Расширенного поиска
-button_advanced_search = browser.find_element(By.XPATH, '//*[@aria-label="Расширенный поиск"]')
-button_advanced_search.click()
-time.sleep(3)
-
-
-
+#
+# mark_remote = browser.find_element(*Xpath.MARK_REMOTE) # знак "Удаленная работа"
+# browser.execute_script("arguments[0].scrollIntoView();", mark_remote)
+# mark_remote.click()
+#
 
 
 
-browser.close()
