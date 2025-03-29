@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-from src.settings import TIME_WAIT
+from src.settings import TIME_WAIT, logger
 
 
 import time
@@ -11,6 +11,7 @@ import time
 
 class Chrome:
     def __init__(self) -> None:
+        logger.info("Браузер запущен.")
         self.browser = webdriver.Chrome()
 
     def get(self,url: str) -> None:
@@ -22,6 +23,7 @@ class Chrome:
             None: Метод не возвращает значений.
         """
         self.browser.get(url)
+        logger.info(f"Ссылка {url} открыта.")
 
     def click_element(self, locator: tuple[str, str], time_wait: int = TIME_WAIT) -> None:
         """
@@ -35,6 +37,7 @@ class Chrome:
         element = self.get_element(locator, time_wait)
         element.click()
         time.sleep(1)
+        logger.info(f"Элемент {locator[1]} нажат.")
 
     def click_element_scroll(self, locator: tuple[str, str], time_wait: int = TIME_WAIT) -> None:
         """
@@ -50,6 +53,7 @@ class Chrome:
         self.scroll(element)
         element.click()
         time.sleep(1)
+        logger.info(f"Элемент {locator[1]} нажат.")
 
     def click_element_scroll_for_mark_remote(self, locator: tuple[str, str]) -> None:
         """
@@ -63,6 +67,7 @@ class Chrome:
         mark_remote = self.browser.find_element(*locator)  # знак "Удаленная работа"
         self.browser.execute_script("arguments[0].scrollIntoView();", mark_remote)
         mark_remote.click()
+        logger.info(f"Элемент {locator[1]} нажат.")
 
 
     def sends_keys(self, locator: tuple[str, str], text: str, time_wait: int = TIME_WAIT) -> None:
@@ -78,6 +83,7 @@ class Chrome:
         element = self.get_element(locator, time_wait)
         element.send_keys(text)
         time.sleep(1)
+        logger.info(f"В поле {locator[1]} добавлено значение {text}.")
 
     def sends_keys_scroll(self, locator: tuple[str, str], text: str, time_wait: int = TIME_WAIT) -> None:
         """
@@ -94,6 +100,7 @@ class Chrome:
         self.scroll(element)
         element.send_keys(text)
         time.sleep(1)
+        logger.info(f"В поле {locator[1]} добавлено значение {text}.")
 
     def get_element(self, locator: tuple[str, str], time_wait: int = TIME_WAIT) -> WebElement:
         """
@@ -106,6 +113,7 @@ class Chrome:
             WebElement: Кликабельный элемент на странице.
         """
         element = WebDriverWait(self.browser, time_wait).until(EC.element_to_be_clickable(locator))
+        logger.info(f"Элемент {locator[1]} найден.")
         return element
 
     def scroll(self,element:  WebElement) -> None:
@@ -117,6 +125,7 @@ class Chrome:
             None: Метод не возвращает значений.
         """
         self.browser.execute_script("arguments[0].scrollIntoView();", element)
+        logger.info(f"Страница прокручена до {element}.")
 
     def max_window(self) -> None:
         """

@@ -1,0 +1,27 @@
+2025-03-29T16:23:25.089516+0600 INFO Скрипт запущен.
+2025-03-29T16:23:25.090519+0600 INFO Браузер запущен.
+2025-03-29T16:23:31.591322+0600 INFO Ссылка https://omsk.hh.ru/ открыта.
+2025-03-29T16:23:31.827578+0600 INFO Элемент //a[@data-qa="login"] найден.
+2025-03-29T16:23:34.017434+0600 INFO Элемент //a[@data-qa="login"] нажат.
+2025-03-29T16:23:34.064554+0600 INFO Элемент //span[@data-qa="expand-login-by-password-text"] найден.
+2025-03-29T16:23:35.189403+0600 INFO Элемент //span[@data-qa="expand-login-by-password-text"] нажат.
+2025-03-29T16:23:35.220958+0600 INFO Элемент //input[@data-qa="login-input-username"] найден.
+2025-03-29T16:23:36.385391+0600 INFO В поле //input[@data-qa="login-input-username"] добавлено значение nastya.urusova.45@gmail.com.
+2025-03-29T16:23:36.434423+0600 INFO Элемент //input[@data-qa="login-input-password"] найден.
+2025-03-29T16:23:37.536426+0600 INFO В поле //input[@data-qa="login-input-password"] добавлено значение 6798101790sS.
+2025-03-29T16:23:37.568745+0600 INFO Элемент //button[@data-qa="account-login-submit"] найден.
+2025-03-29T16:23:38.666926+0600 INFO Элемент //button[@data-qa="account-login-submit"] нажат.
+2025-03-29T16:23:40.213274+0600 INFO Элемент //*[@aria-label="Расширенный поиск"] найден.
+2025-03-29T16:23:42.771937+0600 INFO Элемент //*[@aria-label="Расширенный поиск"] нажат.
+2025-03-29T16:23:42.825932+0600 INFO Элемент //input[@data-qa="vacancysearch__keywords-input" and @class="magritte-field___9S8Tw_7-1-17"] найден.
+2025-03-29T16:23:43.910515+0600 INFO В поле //input[@data-qa="vacancysearch__keywords-input" and @class="magritte-field___9S8Tw_7-1-17"] добавлено значение python.
+2025-03-29T16:23:43.942264+0600 INFO Элемент //button[@data-qa="chip-delete-action"] найден.
+2025-03-29T16:23:43.949855+0600 INFO Страница прокручена до <selenium.webdriver.remote.webelement.WebElement (session="277ea281870aeb86cf10bc247064a90c", element="f.7DB6D3796A9DC7F8A0EEDECB68704814.d.317ECCE110A8951337789D1210906883.e.215")>.
+2025-03-29T16:23:45.273825+0600 INFO Элемент //button[@data-qa="chip-delete-action"] нажат.
+2025-03-29T16:23:45.306599+0600 INFO Элемент //input[@data-qa="advanced-search-salary"] найден.
+2025-03-29T16:23:45.315299+0600 INFO Страница прокручена до <selenium.webdriver.remote.webelement.WebElement (session="277ea281870aeb86cf10bc247064a90c", element="f.7DB6D3796A9DC7F8A0EEDECB68704814.d.317ECCE110A8951337789D1210906883.e.195")>.
+2025-03-29T16:23:46.395668+0600 INFO В поле //input[@data-qa="advanced-search-salary"] добавлено значение 90000.
+2025-03-29T16:23:46.490971+0600 INFO Элемент //input[@data-qa="advanced-search__work_format-item_REMOTE"] нажат.
+2025-03-29T16:23:46.513479+0600 INFO Элемент //button[@data-qa="advanced-search-submit-button"] найден.
+2025-03-29T16:23:50.413630+0600 INFO Элемент //button[@data-qa="advanced-search-submit-button"] нажат.
+2025-03-29T16:23:50.413630+0600 INFO Скрипт окончен
