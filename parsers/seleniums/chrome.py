@@ -143,3 +143,6 @@ class Chrome:
         """
         self.browser.implicitly_wait(3)
 
+    def page_source(self):
+        return self.browser.page_source
+
