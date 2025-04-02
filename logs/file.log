@@ -271,3 +271,25 @@
 2025-04-02T10:29:19.688614+0600 INFO Элемент //button[@data-qa="advanced-search-submit-button"] найден.
 2025-04-02T10:29:23.733915+0600 INFO Элемент //button[@data-qa="advanced-search-submit-button"] нажат.
 2025-04-02T10:29:23.733915+0600 INFO Скрипт окончен
+2025-04-02T10:43:20.138134+0600 INFO Скрипт запущен.
+2025-04-02T10:43:20.139134+0600 INFO Браузер запущен.
+2025-04-02T10:43:24.849463+0600 INFO Ссылка https://omsk.hh.ru/ открыта.
+2025-04-02T10:43:25.039520+0600 INFO Элемент //a[@data-qa="login"] найден.
+2025-04-02T10:43:27.140031+0600 INFO Элемент //a[@data-qa="login"] нажат.
+2025-04-02T10:43:27.181574+0600 INFO Элемент //span[@data-qa="expand-login-by-password-text"] найден.
+2025-04-02T10:43:28.305172+0600 INFO Элемент //span[@data-qa="expand-login-by-password-text"] нажат.
+2025-04-02T10:43:28.339258+0600 INFO Элемент //input[@data-qa="login-input-username"] найден.
+2025-04-02T10:43:44.365892+0600 INFO Скрипт запущен.
+2025-04-02T10:43:44.367087+0600 INFO Браузер запущен.
+2025-04-02T10:43:49.137742+0600 INFO Ссылка https://omsk.hh.ru/ открыта.
+2025-04-02T10:43:49.330854+0600 INFO Элемент //a[@data-qa="login"] найден.
+2025-04-02T10:43:51.399368+0600 INFO Элемент //a[@data-qa="login"] нажат.
+2025-04-02T10:43:51.437999+0600 INFO Элемент //span[@data-qa="expand-login-by-password-text"] найден.
+2025-04-02T10:43:52.560827+0600 INFO Элемент //span[@data-qa="expand-login-by-password-text"] нажат.
+2025-04-02T10:43:52.602241+0600 INFO Элемент //input[@data-qa="login-input-username"] найден.
+2025-04-02T10:43:53.810886+0600 INFO В поле //input[@data-qa="login-input-username"] добавлено значение nastya.urusova.45@gmail.com.
+2025-04-02T10:43:53.842714+0600 INFO Элемент //input[@data-qa="login-input-password"] найден.
+2025-04-02T10:43:54.944747+0600 INFO В поле //input[@data-qa="login-input-password"] добавлено значение 6798101790sS.
+2025-04-02T10:43:54.979844+0600 INFO Элемент //button[@data-qa="account-login-submit"] найден.
+2025-04-02T10:43:56.072339+0600 INFO Элемент //button[@data-qa="account-login-submit"] нажат.
+2025-04-02T10:43:57.595014+0600 INFO Элемент //*[@aria-label="Расширенный поиск"] найден.

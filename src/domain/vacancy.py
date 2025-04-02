@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import List, Optional, Dict, Any
+from typing import List, Optional, Any
 from pydantic import BaseModel, HttpUrl, Field
 
 
@@ -9,13 +9,13 @@ class Area(BaseModel):
     url: HttpUrl
 
 class Address(BaseModel):
-    city: Optional[Any] = None
-    street: Optional[Any] = None
-    building: Optional[Any] = None
-    lat: Optional[Any] = None
-    lng: Optional[Any] = None
-    description: Optional[Any] = None
-    raw: Optional[Any] = None
+    city: Optional[str] = None
+    street: Optional[str] = None
+    building: Optional[str] = None
+    lat: Optional[float] = None
+    lng: Optional[float] = None
+    description: Optional[str] = None
+    raw: Optional[str] = None
 
 class Experience(BaseModel):
     id: str

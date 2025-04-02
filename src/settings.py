@@ -14,8 +14,12 @@ logger.add(
 
 load_dotenv()
 
-LOGIN = os.getenv('LOGIN')
-PASSWORD = os.getenv('PASSWORD')
+LOGIN_HH = os.getenv('LOGIN_HH')
+PASSWORD_HH = os.getenv('PASSWORD_HH')
+
+LOGIN_ZARPLATA = os.getenv('LOGIN_ZARPLATA')
+PASSWORD_ZARPLATA = os.getenv('PASSWORD_ZARPLATA')
 
 TIME_WAIT = 10
 HH_URL = "https://omsk.hh.ru/"
+ZARPLATA_URL = "https://omsk.zarplata.ru/"

@@ -1,34 +1,34 @@
-from bs4 import BeautifulSoup
-import re
-import requests
-import pandas as pd
-from src.settings import LOGIN_HH, PASSWORD_HH, HH_URL, logger
-from src.selectors.xpath import HH
+from src.settings import LOGIN_ZARPLATA, PASSWORD_ZARPLATA, ZARPLATA_URL, logger
 from src.browsers.chrome import Chrome
+from src.selectors.xpath import Zaprlata
+from bs4 import BeautifulSoup
+import requests
+import re
+import pandas as pd
 
-def main ():
+
+def main():
     urls = set()
     vacancy = []
 
     logger.info("Скрипт запущен.")
     browser = Chrome()
-    browser.get(HH_URL)
+    browser.get(ZARPLATA_URL)
     browser.max_window()
     browser.delay_browser()
 
-    browser.click_element(HH.BUTTON_INPUT)
-    browser.click_element(HH.BUTTON_INPUT_PASSWORD)
-    browser.sends_keys(HH.WINDOW_LOGIN, LOGIN_HH)
-    browser.sends_keys(HH.WINDOW_PASSWORD, PASSWORD_HH)
-    browser.click_element(HH.BUTTON_INPUT_IN_LK)
-    browser.click_element(HH.BUTTON_ADVANCED_SEARCH)
-    browser.sends_keys(HH.WINDOW_PROF_OR_POST, "python")
-    browser.click_element_scroll(HH.BUTTON_CLOSE_REGION)
-    browser.sends_keys_scroll(HH.WINDOW_INCOME, "90000")
-    browser.click_element_scroll_for_mark_remote(HH.MARK_REMOTE)
-    browser.click_element(HH.BUTTON_FIND)
+    browser.click_element(Zaprlata.BUTTON_INPUT)
+    browser.click_element(Zaprlata.BUTTON_INPUT_PASSWORD)
+    browser.sends_keys(Zaprlata.WINDOW_LOGIN, LOGIN_ZARPLATA)
+    browser.sends_keys(Zaprlata.WINDOW_PASSWORD, PASSWORD_ZARPLATA)
+    browser.click_element(Zaprlata.BUTTON_INPUT_IN_LK)
+    browser.click_element(Zaprlata.BUTTON_ADVANCED_SEARCH)
+    browser.sends_keys(Zaprlata.WINDOW_PROF_OR_POST, "python")
+    browser.click_element_scroll(Zaprlata.BUTTON_CLOSE_REGION)
+    browser.sends_keys_scroll(Zaprlata.WINDOW_INCOME, "90000")
+    browser.click_element_scroll_for_mark_remote(Zaprlata.MARK_REMOTE)
+    browser.click_element(Zaprlata.BUTTON_FIND)
     logger.info("Скрипт окончен")
-
 
     soup = BeautifulSoup(browser.page_source(), 'html.parser')
 
@@ -41,7 +41,7 @@ def main ():
     for link in vacancy_links:
         url = link.get('href')
         id_url = extract_vacancy_id(url)
-        url_vacancy = f"https://api.hh.ru/vacancies/{id_url}?host=hh.ru"
+        url_vacancy = f"https://api.zarplata.ru/vacancies/{id_url}?host=hh.ru"
         urls.add(url_vacancy)
 
     for url in urls:
@@ -81,14 +81,5 @@ def main ():
     ])
     df.to_excel('result.xlsx')
 
-
-
-
-
 if __name__ == "__main__":
     main()
-
-
-
-
-

@@ -1,10 +1,8 @@
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from src.settings import TIME_WAIT, logger
-
 
 import time
 
@@ -30,7 +28,7 @@ class Chrome:
         Функция сначала находит элемент по locator(XPAth)  и выполняет клик по данному элементу.
         Параметр:
             locator: tuple[str, str] - Локатор элемента в виде кортежа. Пример locator: By.XPATH, '//a[@data-qa="login"]'
-            time_wait: int = TIME_WAIT - Время ожидания в секундах. По умолчанию TIME_WAIT = 10.
+            time_wait: int - Время ожидания в секундах.
         Returns:
             None: Метод не возвращает значений.
         """
@@ -45,7 +43,7 @@ class Chrome:
         и выполняет клик по данному элементу.
         Параметр:
             locator: tuple[str, str] - Локатор элемента в виде кортежа. Пример locator: By.XPATH, '//a[@data-qa="login"]'
-            time_wait: int = TIME_WAIT - Время ожидания в секундах. По умолчанию TIME_WAIT = 10.
+            time_wait: int - Время ожидания в секундах.
         Returns:
             None: Метод не возвращает значений.
         """
@@ -76,7 +74,7 @@ class Chrome:
         Параметр:
             locator: tuple[str, str] - Локатор элемента в виде кортежа. Пример locator: By.XPATH, '//a[@data-qa="login"]'
             text: str - Текст, который необходимо отправить locator
-            time_wait: int = TIME_WAIT - Время ожидания в секундах. По умолчанию TIME_WAIT = 10.
+            time_wait: int - Время ожидания в секундах.
         Returns:
             None: Метод не возвращает значений.
             """
@@ -92,7 +90,7 @@ class Chrome:
         Параметр:
             locator: tuple[str, str] - Локатор элемента в виде кортежа. Пример locator: By.XPATH, '//a[@data-qa="login"]'
             text: str - Текст, который необходимо отправить locator
-            time_wait: int = TIME_WAIT - Время ожидания в секундах. По умолчанию TIME_WAIT = 10.
+            time_wait: int - Время ожидания в секундах.
         Returns:
             None: Метод не возвращает значений.
         """
@@ -108,7 +106,7 @@ class Chrome:
         кликабельный в указанный промежуток времени, он возвращается
         Параметр:
             locator: tuple[str, str] - Локатор элемента в виде кортежа. Пример locator: By.XPATH, '//a[@data-qa="login"]'
-            time_wait: int = TIME_WAIT - Время ожидания в секундах. По умолчанию TIME_WAIT = 10.
+            time_wait: int - Время ожидания в секундах.
         Returns:
             WebElement: Кликабельный элемент на странице.
         """

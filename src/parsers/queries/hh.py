@@ -1,16 +1,12 @@
 import requests  # Для запросов по API
-from domain.vacancy import GeneralVacancy, Vacancy
-
+from src.domain.vacancy import GeneralVacancy, Vacancy
+from pprint import pprint
 URL = "https://api.hh.ru/vacancies?text=python&employment=full&salary=90000&work_format=REMOTE&excluded_text=Senior,DevSecOps"
 
-
-from pprint import pprint
 def get_general_vacancy():
     response = requests.get(URL).json()
     general_vacancies = []
-    urls = []
     for item in response['items']:
-        #urls.append(item.get('url', None))
         general_vacancy_model = GeneralVacancy(**item)
         general_vacancies.append(general_vacancy_model)
     return general_vacancies
