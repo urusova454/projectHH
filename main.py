@@ -2,9 +2,18 @@ from bs4 import BeautifulSoup
 import re
 import requests
 import pandas as pd
+<<<<<<< Updated upstream
 from src.settings import LOGIN, PASSWORD, HH_URL, logger
 from src.selectors.xpath import Xpath
 from parsers.seleniums.chrome import Chrome
+=======
+from src.settings import LOGIN_HH, PASSWORD_HH, HH_URL, logger
+from src.selectors.xpath import HH
+from src.browsers.chrome import Chrome
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
+>>>>>>> Stashed changes
 
 def main():
     urls = set()
@@ -30,7 +39,12 @@ def main():
     logger.info("Скрипт окончен")
 
 
+
     soup = BeautifulSoup(browser.page_source(), 'html.parser')
+
+    database = "sqlite:///parser.db"
+    engine = create_engine(database, echo=True)
+    Session = sessionmaker(autoflush=False, bind=engine)
 
     vacancy_links = soup.find_all('a', href=lambda href: href and '/applicant/vacancy_response' in href)
 

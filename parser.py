@@ -65,8 +65,3 @@ df = pd.DataFrame(vacancy, columns=[
 df.to_excel('result.xlsx')
 
 
-
-
-
-#href="/applicant/vacancy_response?vacancyId=118508577&employerId=640251&hhtmFrom=vacancy_search_list"
-#https://omsk.hh.ru/vacancy/118508577
