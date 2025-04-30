@@ -1,6 +1,8 @@
 from datetime import datetime
 from typing import List, Optional, Dict, Any
 from pydantic import BaseModel, HttpUrl, Field
+from uuid import UUID, uuid4
+from pydantic import Field as f
 
 
 class Area(BaseModel):
@@ -84,7 +86,7 @@ class Type(BaseModel):
     name: str
 
 class Vacancy(BaseModel):
-    id: str
+    id: UUID = f(default_factory=uuid4, description="UUID вакансии")
     premium: bool
     billing_type: Optional[Any] = None
     relations: List[Any]
