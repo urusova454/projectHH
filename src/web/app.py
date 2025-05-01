@@ -1,26 +1,10 @@
-import psycopg2
-from src.settings import PORT, PASSWORD, DBNAME, HOST, USER
 from src.repos.vacancies import Vacancy
+from src.config.database import conn
 from fastapi import Depends, FastAPI, status, HTTPException
 from pydantic import BaseModel
 
 app = FastAPI()
 
-def get_conn():
-    try:
-        conn = psycopg2.connect(
-            port=PORT,
-            password=PASSWORD,
-            dbname=DBNAME,
-            host=HOST,
-            user=USER
-        )
-        yield conn
-        conn.commit()
-    except BaseException:
-        conn.rollback()
-    finally:
-        conn.close()
 
 class VacancyCreate(BaseModel):
     name_vacancy: str
@@ -31,7 +15,7 @@ class VacancyCreate(BaseModel):
 
 
 @app.get("/vacancies")
-def get_all_vacancies(conn = Depends(get_conn)):
+def get_all_vacancies(conn = Depends(conn)):
     vacancy_repo = Vacancy(conn)
     vacancies = vacancy_repo.get_all()
     return {"vacancies": vacancies}
@@ -40,7 +24,7 @@ def get_all_vacancies(conn = Depends(get_conn)):
     "/vacancies/{vacancy_id}",
     description="Получение вакансии по идентификатору"
 )
-def get_vacancy(vacancy_id: int, conn = Depends(get_conn)):
+def get_vacancy(vacancy_id: int, conn = Depends(conn)):
     vacancy_repo = Vacancy(conn)
     vacancy = vacancy_repo.get(vacancy_id)
     if not vacancy:
@@ -54,7 +38,7 @@ def get_vacancy(vacancy_id: int, conn = Depends(get_conn)):
     "/vacancies",
     status_code=status.HTTP_201_CREATED
 )
-def create_vacancy(vacancy: VacancyCreate, conn = Depends(get_conn)):
+def create_vacancy(vacancy: VacancyCreate, conn = Depends(conn)):
     vacancy_repo = Vacancy(conn)
     vacancy_repo.create((vacancy.name_vacancy, vacancy.salary, vacancy.address, vacancy.description, vacancy.url))
     return vacancy
@@ -63,7 +47,7 @@ def create_vacancy(vacancy: VacancyCreate, conn = Depends(get_conn)):
     "/vacancies/{vacancy_id}",
     description="Обновление данных по вакансии"
 )
-def update_vacancy(vacancy_id: int,vacancy: VacancyCreate, conn = Depends(get_conn)):
+def update_vacancy(vacancy_id: int,vacancy: VacancyCreate, conn = Depends(conn)):
     vacancy_repo = Vacancy(conn)
     if not vacancy_repo.get(vacancy_id):
         raise HTTPException(
@@ -85,7 +69,7 @@ def update_vacancy(vacancy_id: int,vacancy: VacancyCreate, conn = Depends(get_co
     status_code=status.HTTP_204_NO_CONTENT,
     description="Удаление вакансии по идентификатору",
 )
-def delete_vacancy(vacancy_id: int, conn = Depends(get_conn)):
+def delete_vacancy(vacancy_id: int, conn = Depends(conn)):
     vacancy_repo = Vacancy(conn)
     if not vacancy_repo.get(vacancy_id):
         raise HTTPException(
