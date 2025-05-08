@@ -1,20 +1,24 @@
 import psycopg2
 from src.settings import PORT, PASSWORD, DBNAME, HOST, USER
+from psycopg2 import pool
+
+
+connection_pool = pool.SimpleConnectionPool(
+    minconn=1,
+    maxconn=10,
+    host=HOST,
+    port=PORT,
+    dbname=DBNAME,
+    user=USER,
+    password=PASSWORD
+)
 
 def get_conn():
+    conn = connection_pool.getconn()
     try:
-        conn = psycopg2.connect(
-            port=PORT,
-            password=PASSWORD,
-            dbname=DBNAME,
-            host=HOST,
-            user=USER
-        )
         yield conn
-        conn.commit()
-    except BaseException:
-        conn.rollback()
     finally:
-        conn.close()
+        connection_pool.putconn(conn)
 
-conn = get_conn()
+
+# conn = get_conn()

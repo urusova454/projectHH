@@ -8,4 +8,9 @@ CREATE TABLE IF NOT EXISTS vacancy(
     url VARCHAR(100)
 );
 
+CREATE TABLE IF NOT EXISTS migration(
+    name VARCHAR(40)
+);
+INSERT INTO migration VALUES ('migration_1.sql');
+
 COMMIT;

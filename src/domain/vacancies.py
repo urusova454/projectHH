@@ -1,7 +1,7 @@
-from typing import Optional
-from pydantic import BaseModel, HttpUrl, Field as f
-from uuid import UUID, uuid4
 
+from pydantic import BaseModel,  Field as f
+from uuid import UUID, uuid4
+from typing import  Optional
 
 class Vacancy(BaseModel):
     id: UUID = f(default_factory=uuid4, description="Идентификатор вакансии")
@@ -9,4 +9,4 @@ class Vacancy(BaseModel):
     salary: Optional[int] = f(default=None, description="Зарплата")
     address: Optional[str] = f(default=None, description="Адрес")
     description: str = f(description="Описание")
-    url: HttpUrl = f(default=None, description="Ссылка на вакансию")
+    url: str = f(default=None, description="Ссылка на вакансию")

@@ -3,9 +3,9 @@ import re
 import requests
 import pandas as pd
 
-from src.settings import LOGIN, PASSWORD, HH_URL, logger
+from src.settings import LOGIN_HH, PASSWORD_HH, HH_URL, logger
 from src.selectors.xpath import Xpath
-from parsers.seleniums.chrome import Chrome
+from src.parsers.chrome import Chrome
 # =======
 # from src.settings import LOGIN_HH, PASSWORD_HH, HH_URL, logger
 # from src.selectors.xpath import HH
@@ -27,8 +27,8 @@ def main():
 
     browser.click_element(Xpath.BUTTON_INPUT)
     browser.click_element(Xpath.BUTTON_INPUT_PASSWORD)
-    browser.sends_keys(Xpath.WINDOW_LOGIN,LOGIN)
-    browser.sends_keys(Xpath.WINDOW_PASSWORD,PASSWORD)
+    browser.sends_keys(Xpath.WINDOW_LOGIN,LOGIN_HH)
+    browser.sends_keys(Xpath.WINDOW_PASSWORD,PASSWORD_HH)
     browser.click_element(Xpath.BUTTON_INPUT_IN_LK)
     browser.click_element(Xpath.BUTTON_ADVANCED_SEARCH)
     browser.sends_keys(Xpath.WINDOW_PROF_OR_POST, "python")
