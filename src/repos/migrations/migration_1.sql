@@ -8,4 +8,10 @@ CREATE TABLE IF NOT EXISTS vacancy(
     url VARCHAR(100)
 );
 
+CREATE TABLE IF NOT EXISTS migrations (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255)
+);
+
+
 COMMIT;

@@ -1,0 +1,215 @@
+2025-05-09T21:40:22.761576+0600 INFO Скрипт запущен.
+2025-05-09T21:40:22.762862+0600 INFO Браузер запущен.
+2025-05-09T21:40:47.675200+0600 INFO Ссылка https://omsk.hh.ru/ открыта.
+2025-05-09T21:40:48.045465+0600 INFO Элемент //a[@data-qa="login"] найден.
+2025-05-09T21:40:50.601759+0600 INFO Элемент //a[@data-qa="login"] нажат.
+2025-05-09T23:29:14.703793+0600 INFO Скрипт запущен.
+2025-05-09T23:29:14.703793+0600 INFO Браузер запущен.
+2025-05-09T23:29:26.167804+0600 INFO Ссылка https://omsk.hh.ru/ открыта.
+2025-05-09T23:29:26.841173+0600 INFO Элемент //a[@data-qa="login"] найден.
+2025-05-09T23:29:30.065501+0600 INFO Элемент //a[@data-qa="login"] нажат.
+2025-05-09T23:29:30.161987+0600 INFO Элемент //div[text()="Профиль соискателя"] найден.
+2025-05-09T23:29:31.357159+0600 INFO Элемент //div[text()="Профиль соискателя"] нажат.
+2025-05-09T23:29:31.408219+0600 INFO Элемент //button[@data-qa="submit-button"] найден.
+2025-05-09T23:29:32.693449+0600 INFO Элемент //button[@data-qa="submit-button"] нажат.
+2025-05-09T23:29:32.744867+0600 INFO Элемент //div[text()="Почта"] найден.
+2025-05-09T23:29:33.957824+0600 INFO Элемент //div[text()="Почта"] нажат.
+2025-05-09T23:29:34.012840+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] найден.
+2025-05-10T21:33:00.065328+0600 INFO Скрипт запущен.
+2025-05-10T21:33:00.066332+0600 INFO Браузер запущен.
+2025-05-10T21:33:11.015157+0600 INFO Ссылка https://omsk.hh.ru/ открыта.
+2025-05-10T21:33:24.671741+0600 INFO Элемент //a[@data-qa="login"] найден.
+2025-05-10T21:33:27.734472+0600 INFO Элемент //a[@data-qa="login"] нажат.
+2025-05-10T21:33:27.804372+0600 INFO Элемент //div[text()="Профиль соискателя"] найден.
+2025-05-10T21:33:28.982138+0600 INFO Элемент //div[text()="Профиль соискателя"] нажат.
+2025-05-10T21:33:29.020244+0600 INFO Элемент //button[@data-qa="submit-button"] найден.
+2025-05-10T21:33:30.235592+0600 INFO Элемент //button[@data-qa="submit-button"] нажат.
+2025-05-10T21:33:30.286290+0600 INFO Элемент //div[text()="Почта"] найден.
+2025-05-10T21:33:31.472131+0600 INFO Элемент //div[text()="Почта"] нажат.
+2025-05-10T21:33:31.513765+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] найден.
+2025-05-10T21:33:32.644101+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] нажат.
+2025-05-10T21:33:32.681908+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] найден.
+2025-05-10T21:35:02.244451+0600 INFO Скрипт запущен.
+2025-05-10T21:35:02.244451+0600 INFO Браузер запущен.
+2025-05-10T21:35:16.809973+0600 INFO Ссылка https://omsk.hh.ru/ открыта.
+2025-05-10T21:35:17.134793+0600 INFO Элемент //a[@data-qa="login"] найден.
+2025-05-10T21:35:20.304976+0600 INFO Элемент //a[@data-qa="login"] нажат.
+2025-05-10T21:35:20.353853+0600 INFO Элемент //div[text()="Профиль соискателя"] найден.
+2025-05-10T21:35:21.460855+0600 INFO Элемент //div[text()="Профиль соискателя"] нажат.
+2025-05-10T21:35:21.522407+0600 INFO Элемент //button[@data-qa="submit-button"] найден.
+2025-05-10T21:35:22.769413+0600 INFO Элемент //button[@data-qa="submit-button"] нажат.
+2025-05-10T21:35:22.808412+0600 INFO Элемент //div[text()="Почта"] найден.
+2025-05-10T21:35:23.935975+0600 INFO Элемент //div[text()="Почта"] нажат.
+2025-05-10T21:35:23.978430+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] найден.
+2025-05-10T21:35:25.127921+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] нажат.
+2025-05-10T21:35:25.162048+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] найден.
+2025-05-10T21:35:26.417826+0600 INFO В поле //input[@data-qa="applicant-login-input-email"] добавлено значение nastya.urusova.45@gmail.com.
+2025-05-10T21:35:26.486027+0600 INFO Элемент //button[@data-qa = "expand-login-by-password"] найден.
+2025-05-10T21:35:27.647574+0600 INFO Элемент //button[@data-qa = "expand-login-by-password"] нажат.
+2025-05-10T21:35:27.724512+0600 INFO Элемент //input[@data-qa = 'applicant-login-input-password'] найден.
+2025-05-10T21:35:28.888633+0600 INFO В поле //input[@data-qa = 'applicant-login-input-password'] добавлено значение 6798101790sS.
+2025-05-10T21:39:27.196718+0600 INFO Скрипт запущен.
+2025-05-10T21:39:27.196718+0600 INFO Браузер запущен.
+2025-05-10T21:39:37.093593+0600 INFO Ссылка https://omsk.hh.ru/ открыта.
+2025-05-10T21:39:37.363062+0600 INFO Элемент //a[@data-qa="login"] найден.
+2025-05-10T21:39:40.240205+0600 INFO Элемент //a[@data-qa="login"] нажат.
+2025-05-10T21:39:40.288915+0600 INFO Элемент //div[text()="Профиль соискателя"] найден.
+2025-05-10T21:39:41.400523+0600 INFO Элемент //div[text()="Профиль соискателя"] нажат.
+2025-05-10T21:39:41.438863+0600 INFO Элемент //button[@data-qa="submit-button"] найден.
+2025-05-10T21:39:42.627849+0600 INFO Элемент //button[@data-qa="submit-button"] нажат.
+2025-05-10T21:39:42.688653+0600 INFO Элемент //div[text()="Почта"] найден.
+2025-05-10T21:39:43.812423+0600 INFO Элемент //div[text()="Почта"] нажат.
+2025-05-10T21:39:43.866461+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] найден.
+2025-05-10T21:39:44.980956+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] нажат.
+2025-05-10T21:39:45.011974+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] найден.
+2025-05-10T21:39:46.215775+0600 INFO В поле //input[@data-qa="applicant-login-input-email"] добавлено значение nastya.urusova.45@gmail.com.
+2025-05-10T21:39:46.264384+0600 INFO Элемент //button[@data-qa = "expand-login-by-password"] найден.
+2025-05-10T21:39:47.480917+0600 INFO Элемент //button[@data-qa = "expand-login-by-password"] нажат.
+2025-05-10T21:39:47.527569+0600 INFO Элемент //input[@data-qa = 'applicant-login-input-password'] найден.
+2025-05-10T21:39:48.650175+0600 INFO В поле //input[@data-qa = 'applicant-login-input-password'] добавлено значение 6798101790sS.
+2025-05-10T21:39:48.688094+0600 INFO Элемент //button[@data-qa="submit-button"] найден.
+2025-05-10T21:39:49.815239+0600 INFO Элемент //button[@data-qa="submit-button"] нажат.
+2025-05-10T21:39:59.107748+0600 INFO Элемент //*[@aria-label="Расширенный поиск"] найден.
+2025-05-10T21:40:06.584693+0600 INFO Элемент //*[@aria-label="Расширенный поиск"] нажат.
+2025-05-10T21:49:02.618441+0600 INFO Скрипт запущен.
+2025-05-10T21:49:02.619501+0600 INFO Браузер запущен.
+2025-05-10T21:49:20.551514+0600 INFO Ссылка https://omsk.hh.ru/ открыта.
+2025-05-10T21:49:20.863743+0600 INFO Элемент //a[@data-qa="login"] найден.
+2025-05-10T21:49:24.670986+0600 INFO Элемент //a[@data-qa="login"] нажат.
+2025-05-10T21:49:24.724854+0600 INFO Элемент //div[text()="Профиль соискателя"] найден.
+2025-05-10T21:49:25.837181+0600 INFO Элемент //div[text()="Профиль соискателя"] нажат.
+2025-05-10T21:49:25.871605+0600 INFO Элемент //button[@data-qa="submit-button"] найден.
+2025-05-10T21:49:27.105470+0600 INFO Элемент //button[@data-qa="submit-button"] нажат.
+2025-05-10T21:49:27.147199+0600 INFO Элемент //div[text()="Почта"] найден.
+2025-05-10T21:49:28.357200+0600 INFO Элемент //div[text()="Почта"] нажат.
+2025-05-10T21:49:28.396773+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] найден.
+2025-05-10T21:49:29.509400+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] нажат.
+2025-05-10T21:49:29.546656+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] найден.
+2025-05-10T21:49:30.852820+0600 INFO В поле //input[@data-qa="applicant-login-input-email"] добавлено значение nastya.urusova.45@gmail.com.
+2025-05-10T21:49:30.903571+0600 INFO Элемент //button[@data-qa = "expand-login-by-password"] найден.
+2025-05-10T21:49:32.081633+0600 INFO Элемент //button[@data-qa = "expand-login-by-password"] нажат.
+2025-05-10T21:49:32.123537+0600 INFO Элемент //input[@data-qa = 'applicant-login-input-password'] найден.
+2025-05-10T21:49:33.262605+0600 INFO В поле //input[@data-qa = 'applicant-login-input-password'] добавлено значение 6798101790sS.
+2025-05-10T21:49:33.304125+0600 INFO Элемент //button[@data-qa="submit-button"] найден.
+2025-05-10T21:49:34.442506+0600 INFO Элемент //button[@data-qa="submit-button"] нажат.
+2025-05-10T21:49:39.662695+0600 INFO Элемент //*[@aria-label="Расширенный поиск"] найден.
+2025-05-10T21:49:48.380204+0600 INFO Элемент //*[@aria-label="Расширенный поиск"] нажат.
+2025-05-10T21:49:48.435801+0600 INFO Элемент //*[@data-qa="vacancysearch__keywords-input"] найден.
+2025-05-10T21:49:49.666567+0600 INFO В поле //*[@data-qa="vacancysearch__keywords-input"] добавлено значение python.
+2025-05-10T21:49:49.723243+0600 INFO Элемент //button[@data-qa="chip-delete-action"] найден.
+2025-05-10T21:49:49.736007+0600 INFO Страница прокручена до <selenium.webdriver.remote.webelement.WebElement (session="630e85dbc1578371ab669f50e7fa1bab", element="f.36FF4FC5AC75836D8769C1B80164E39A.d.930B88B60E4A940FCD61BD3C14EAA427.e.221")>.
+2025-05-10T21:49:51.078202+0600 INFO Элемент //button[@data-qa="chip-delete-action"] нажат.
+2025-05-10T21:49:51.117930+0600 INFO Элемент //input[@data-qa="advanced-search-salary"] найден.
+2025-05-10T21:49:51.128114+0600 INFO Страница прокручена до <selenium.webdriver.remote.webelement.WebElement (session="630e85dbc1578371ab669f50e7fa1bab", element="f.36FF4FC5AC75836D8769C1B80164E39A.d.930B88B60E4A940FCD61BD3C14EAA427.e.206")>.
+2025-05-10T21:49:52.299069+0600 INFO В поле //input[@data-qa="advanced-search-salary"] добавлено значение 90000.
+2025-05-10T21:49:52.476804+0600 INFO Элемент //input[@data-qa="advanced-search__work_format-item_REMOTE"] нажат.
+2025-05-10T21:49:52.521814+0600 INFO Элемент //button[@data-qa="advanced-search-submit-button"] найден.
+2025-05-10T21:50:00.641117+0600 INFO Элемент //button[@data-qa="advanced-search-submit-button"] нажат.
+2025-05-10T21:50:00.641117+0600 INFO Скрипт окончен
+2025-05-10T21:53:46.979250+0600 INFO Скрипт запущен.
+2025-05-10T21:53:46.980260+0600 INFO Браузер запущен.
+2025-05-10T21:53:53.895979+0600 INFO Ссылка https://chelyabinsk.zarplata.ru/ открыта.
+2025-05-10T21:53:54.706712+0600 INFO Элемент //a[@data-qa="login"] найден.
+2025-05-10T21:53:56.906403+0600 INFO Элемент //a[@data-qa="login"] нажат.
+2025-05-10T22:06:27.899768+0600 INFO Скрипт запущен.
+2025-05-10T22:06:27.899768+0600 INFO Браузер запущен.
+2025-05-10T22:06:39.726363+0600 INFO Ссылка https://chelyabinsk.zarplata.ru/ открыта.
+2025-05-10T22:06:40.085563+0600 INFO Элемент //a[@data-qa="login"] найден.
+2025-05-10T22:06:43.643902+0600 INFO Элемент //a[@data-qa="login"] нажат.
+2025-05-10T22:09:00.583744+0600 INFO Скрипт запущен.
+2025-05-10T22:09:00.584922+0600 INFO Браузер запущен.
+2025-05-10T22:09:07.796360+0600 INFO Ссылка https://chelyabinsk.zarplata.ru/ открыта.
+2025-05-10T22:09:08.148477+0600 INFO Элемент //a[@data-qa="login"] найден.
+2025-05-10T22:09:10.403806+0600 INFO Элемент //a[@data-qa="login"] нажат.
+2025-05-10T22:09:10.498777+0600 INFO Элемент //div[text()="Профиль соискателя"] найден.
+2025-05-10T22:09:11.618496+0600 INFO Элемент //div[text()="Профиль соискателя"] нажат.
+2025-05-10T22:09:11.653424+0600 INFO Элемент //button[@data-qa="submit-button"] найден.
+2025-05-10T22:09:12.885278+0600 INFO Элемент //button[@data-qa="submit-button"] нажат.
+2025-05-10T22:09:12.929758+0600 INFO Элемент //div[text()="Почта"] найден.
+2025-05-10T22:09:14.065568+0600 INFO Элемент //div[text()="Почта"] нажат.
+2025-05-10T22:09:14.147462+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] найден.
+2025-05-10T22:09:15.294279+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] нажат.
+2025-05-10T22:09:15.333903+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] найден.
+2025-05-10T22:09:16.552440+0600 INFO В поле //input[@data-qa="applicant-login-input-email"] добавлено значение nastya.urusova.45@gmail.com.
+2025-05-10T22:09:16.592077+0600 INFO Элемент //button[@data-qa = "expand-login-by-password"] найден.
+2025-05-10T22:09:17.793418+0600 INFO Элемент //button[@data-qa = "expand-login-by-password"] нажат.
+2025-05-10T22:09:17.839989+0600 INFO Элемент //input[@data-qa = 'applicant-login-input-password'] найден.
+2025-05-10T22:09:18.979551+0600 INFO В поле //input[@data-qa = 'applicant-login-input-password'] добавлено значение pA3-pg5-VAz-L24.
+2025-05-10T22:09:19.017630+0600 INFO Элемент //button[@data-qa="submit-button"] найден.
+2025-05-10T22:09:20.184569+0600 INFO Элемент //button[@data-qa="submit-button"] нажат.
+2025-05-10T22:09:23.535851+0600 INFO Элемент //*[@aria-label="Расширенный поиск"] найден.
+2025-05-10T22:09:26.390642+0600 INFO Элемент //*[@aria-label="Расширенный поиск"] нажат.
+2025-05-10T22:09:26.581675+0600 INFO Элемент //*[@data-qa="vacancysearch__keywords-input"] найден.
+2025-05-10T22:09:27.799912+0600 INFO В поле //*[@data-qa="vacancysearch__keywords-input"] добавлено значение python.
+2025-05-10T22:09:27.851990+0600 INFO Элемент //button[@data-qa="chip-delete-action"] найден.
+2025-05-10T22:09:27.868469+0600 INFO Страница прокручена до <selenium.webdriver.remote.webelement.WebElement (session="968017e118efa26ad6f59e66949e9b6b", element="f.C3687FA1E072003054222CFC13FD755B.d.61B746A4DFE1153B7AABFB212606BB59.e.212")>.
+2025-05-10T22:09:29.212838+0600 INFO Элемент //button[@data-qa="chip-delete-action"] нажат.
+2025-05-10T22:09:29.263951+0600 INFO Элемент //input[@data-qa="advanced-search-salary"] найден.
+2025-05-10T22:09:29.278338+0600 INFO Страница прокручена до <selenium.webdriver.remote.webelement.WebElement (session="968017e118efa26ad6f59e66949e9b6b", element="f.C3687FA1E072003054222CFC13FD755B.d.61B746A4DFE1153B7AABFB212606BB59.e.194")>.
+2025-05-10T22:09:30.455647+0600 INFO В поле //input[@data-qa="advanced-search-salary"] добавлено значение 90000.
+2025-05-11T10:20:54.728000+0600 INFO Скрипт запущен.
+2025-05-11T10:20:54.728000+0600 INFO Браузер запущен.
+2025-05-11T10:21:01.840606+0600 INFO Ссылка https://chelyabinsk.zarplata.ru/ открыта.
+2025-05-11T10:21:02.421360+0600 INFO Элемент //a[@data-qa="login"] найден.
+2025-05-11T10:21:04.407233+0600 INFO Элемент //a[@data-qa="login"] нажат.
+2025-05-11T10:21:04.473587+0600 INFO Элемент //div[text()="Профиль соискателя"] найден.
+2025-05-11T10:21:05.543325+0600 INFO Элемент //div[text()="Профиль соискателя"] нажат.
+2025-05-11T10:21:05.570502+0600 INFO Элемент //button[@data-qa="submit-button"] найден.
+2025-05-11T10:21:06.697096+0600 INFO Элемент //button[@data-qa="submit-button"] нажат.
+2025-05-11T10:21:06.727653+0600 INFO Элемент //div[text()="Почта"] найден.
+2025-05-11T10:21:07.816209+0600 INFO Элемент //div[text()="Почта"] нажат.
+2025-05-11T10:21:07.844759+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] найден.
+2025-05-11T10:21:08.910150+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] нажат.
+2025-05-11T10:21:08.933193+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] найден.
+2025-05-11T10:21:10.069616+0600 INFO В поле //input[@data-qa="applicant-login-input-email"] добавлено значение nastya.urusova.45@gmail.com.
+2025-05-11T10:21:10.099845+0600 INFO Элемент //button[@data-qa = "expand-login-by-password"] найден.
+2025-05-11T10:21:11.214953+0600 INFO Элемент //button[@data-qa = "expand-login-by-password"] нажат.
+2025-05-11T10:21:11.239252+0600 INFO Элемент //input[@data-qa = 'applicant-login-input-password'] найден.
+2025-05-11T10:21:12.311748+0600 INFO В поле //input[@data-qa = 'applicant-login-input-password'] добавлено значение pA3-pg5-VAz-L24.
+2025-05-11T10:21:12.337376+0600 INFO Элемент //button[@data-qa="submit-button"] найден.
+2025-05-11T10:21:13.402666+0600 INFO Элемент //button[@data-qa="submit-button"] нажат.
+2025-05-11T10:21:17.412206+0600 INFO Элемент //*[@aria-label="Расширенный поиск"] найден.
+2025-05-11T10:21:20.098982+0600 INFO Элемент //*[@aria-label="Расширенный поиск"] нажат.
+2025-05-11T10:21:20.138252+0600 INFO Элемент //*[@data-qa="vacancysearch__keywords-input"] найден.
+2025-05-11T10:21:21.261369+0600 INFO В поле //*[@data-qa="vacancysearch__keywords-input"] добавлено значение python.
+2025-05-11T10:21:21.292082+0600 INFO Элемент //button[@data-qa="chip-delete-action"] найден.
+2025-05-11T10:21:21.299324+0600 INFO Страница прокручена до <selenium.webdriver.remote.webelement.WebElement (session="367a0df73e446e18c783ffa46d6c7e9a", element="f.C51DE7F37FD82B99CD263E6CF8CE67D0.d.70128B3AC7BDD7C8C0C92865F53B8BAC.e.211")>.
+2025-05-11T10:21:22.633230+0600 INFO Элемент //button[@data-qa="chip-delete-action"] нажат.
+2025-05-11T10:21:22.669859+0600 INFO Элемент //input[@data-qa="advanced-search-salary"] найден.
+2025-05-11T10:21:22.676843+0600 INFO Страница прокручена до <selenium.webdriver.remote.webelement.WebElement (session="367a0df73e446e18c783ffa46d6c7e9a", element="f.C51DE7F37FD82B99CD263E6CF8CE67D0.d.70128B3AC7BDD7C8C0C92865F53B8BAC.e.193")>.
+2025-05-11T10:21:23.759907+0600 INFO В поле //input[@data-qa="advanced-search-salary"] добавлено значение 90000.
+2025-05-11T10:23:33.640168+0600 INFO Скрипт запущен.
+2025-05-11T10:23:33.640168+0600 INFO Браузер запущен.
+2025-05-11T10:23:44.762847+0600 INFO Ссылка https://chelyabinsk.zarplata.ru/ открыта.
+2025-05-11T10:23:44.957384+0600 INFO Элемент //a[@data-qa="login"] найден.
+2025-05-11T10:23:47.038194+0600 INFO Элемент //a[@data-qa="login"] нажат.
+2025-05-11T10:23:47.076035+0600 INFO Элемент //div[text()="Профиль соискателя"] найден.
+2025-05-11T10:23:48.160291+0600 INFO Элемент //div[text()="Профиль соискателя"] нажат.
+2025-05-11T10:23:48.192800+0600 INFO Элемент //button[@data-qa="submit-button"] найден.
+2025-05-11T10:23:49.363405+0600 INFO Элемент //button[@data-qa="submit-button"] нажат.
+2025-05-11T10:23:49.395263+0600 INFO Элемент //div[text()="Почта"] найден.
+2025-05-11T10:23:50.488336+0600 INFO Элемент //div[text()="Почта"] нажат.
+2025-05-11T10:23:50.519869+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] найден.
+2025-05-11T10:23:51.590387+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] нажат.
+2025-05-11T10:23:51.618399+0600 INFO Элемент //input[@data-qa="applicant-login-input-email"] найден.
+2025-05-11T10:23:52.758680+0600 INFO В поле //input[@data-qa="applicant-login-input-email"] добавлено значение nastya.urusova.45@gmail.com.
+2025-05-11T10:23:52.791081+0600 INFO Элемент //button[@data-qa = "expand-login-by-password"] найден.
+2025-05-11T10:23:53.891221+0600 INFO Элемент //button[@data-qa = "expand-login-by-password"] нажат.
+2025-05-11T10:23:53.923623+0600 INFO Элемент //input[@data-qa = 'applicant-login-input-password'] найден.
+2025-05-11T10:23:55.023171+0600 INFO В поле //input[@data-qa = 'applicant-login-input-password'] добавлено значение pA3-pg5-VAz-L24.
+2025-05-11T10:23:55.052283+0600 INFO Элемент //button[@data-qa="submit-button"] найден.
+2025-05-11T10:23:56.127282+0600 INFO Элемент //button[@data-qa="submit-button"] нажат.
+2025-05-11T10:23:59.533853+0600 INFO Элемент //*[@aria-label="Расширенный поиск"] найден.
+2025-05-11T10:24:02.459624+0600 INFO Элемент //*[@aria-label="Расширенный поиск"] нажат.
+2025-05-11T10:24:02.495645+0600 INFO Элемент //*[@data-qa="vacancysearch__keywords-input"] найден.
+2025-05-11T10:24:03.609162+0600 INFO В поле //*[@data-qa="vacancysearch__keywords-input"] добавлено значение python.
+2025-05-11T10:24:03.648114+0600 INFO Элемент //button[@data-qa="chip-delete-action"] найден.
+2025-05-11T10:24:03.659824+0600 INFO Страница прокручена до <selenium.webdriver.remote.webelement.WebElement (session="76050f9997e3f9262ec7ba52a575d87c", element="f.497232FA45966FD6F1A43C706E726A6F.d.FE687A02038AC37A5274CCB9787BCFCA.e.217")>.
+2025-05-11T10:24:04.974087+0600 INFO Элемент //button[@data-qa="chip-delete-action"] нажат.
+2025-05-11T10:24:05.011415+0600 INFO Элемент //input[@data-qa="advanced-search-salary"] найден.
+2025-05-11T10:24:05.019756+0600 INFO Страница прокручена до <selenium.webdriver.remote.webelement.WebElement (session="76050f9997e3f9262ec7ba52a575d87c", element="f.497232FA45966FD6F1A43C706E726A6F.d.FE687A02038AC37A5274CCB9787BCFCA.e.202")>.
+2025-05-11T10:24:06.107280+0600 INFO В поле //input[@data-qa="advanced-search-salary"] добавлено значение 90000.
+2025-05-11T10:24:06.187410+0600 INFO Элемент //input[@data-qa="advanced-search__schedule-item_remote"] нажат.
+2025-05-11T10:24:06.232951+0600 INFO Элемент //button[@data-qa="advanced-search-submit-button"] найден.
+2025-05-11T10:24:09.430634+0600 INFO Элемент //button[@data-qa="advanced-search-submit-button"] нажат.
+2025-05-11T10:24:09.430634+0600 INFO Скрипт окончен

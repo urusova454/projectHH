@@ -1,6 +1,8 @@
 from launch import connection
+from uuid import UUID, uuid4
 
-class Vacancy:
+
+class VacancyRepository:
 
     def __init__(self, connection):
         self.connection = connection
@@ -8,48 +10,59 @@ class Vacancy:
     def create(self, values):
         cursor = self.connection.cursor()
         query = """ 
-        INSERT INTO vacancy(name_vacancy, salary, address, description, url)
-        VALUES (%s,%s,%s,%s,%s)
+        INSERT INTO vacancy(id, name, salary, address, description, url)
+        VALUES (%s,%s,%s,%s,%s,%s)
+        RETURNING name, salary, address, description, url
         """
-        cursor.execute(query, values)
+        cursor.execute(query,values)
+        result = cursor.fetchone()
         self.connection.commit()
+        columns = [col[0] for col in cursor.description]
+        return dict(zip(columns, result))
 
-    def update(self, vacancy_id, new_values):
+
+    def update(self, vacancy_id: UUID, new_values):
         cursor = self.connection.cursor()
         query = """
                 UPDATE vacancy 
-                SET name_vacancy = %s,
+                SET name = %s,
                     salary = %s,
                     address = %s,
                     description = %s,
                     url = %s
-                WHERE id_vacancy = %s
+                WHERE id = %s
+                RETURNING id, name, salary, address, description, url
                 """
         values = new_values + (vacancy_id, )
         cursor.execute(query, values)
-        self.connection.commit()
-
-    def delete(self, vacancy_id):
-        cursor = self.connection.cursor()
-        cursor.execute("DELETE FROM vacancy WHERE id_vacancy = %s", (vacancy_id,))
-        self.connection.commit()
-
-    def get(self, vacancy_id):
-        cursor = self.connection.cursor()
-        query = """
-            SELECT id_vacancy, name_vacancy, salary, address, description, url
-            FROM vacancy
-            WHERE id_vacancy = %s
-            """
-        cursor.execute(query, (vacancy_id, ))
         result = cursor.fetchone()
         self.connection.commit()
-        return result
+        columns = [col[0] for col in cursor.description]
+        return dict(zip(columns, result))
+
+    def delete(self, vacancy_id: UUID):
+        cursor = self.connection.cursor()
+        cursor.execute("DELETE FROM vacancy WHERE id = %s", (vacancy_id,))
+        self.connection.commit()
+
+    def get(self, vacancy_id: UUID):
+        cursor = self.connection.cursor()
+        query = """
+            SELECT id, name, salary, address, description, url
+            FROM vacancy
+            WHERE id = %s
+            """
+        cursor.execute(query, (str(vacancy_id), ))
+        result = cursor.fetchone()
+        self.connection.commit()
+        columns = [col[0] for col in cursor.description]
+        return dict(zip(columns, result))
 
     def get_all(self):
         cursor = self.connection.cursor()
         cursor.execute("SELECT * FROM vacancy")
-        return cursor.fetchall()
+        columns = [col[0] for col in cursor.description]
+        return [dict(zip(columns, row)) for row in cursor.fetchall()]
 
 
-vacancy_repo = Vacancy(connection=connection)
+vacancy_repo = VacancyRepository(connection=connection)

@@ -1,20 +1,37 @@
 import psycopg2
 from src.settings import PORT, PASSWORD, DBNAME, HOST, USER, MIGRATION_PATH
+from psycopg2 import OperationalError
+from src.config.database import get_conn
 
 
+def get_migration_names(connection):
+    try:
+        cursor = connection.cursor()
 
-def get_db_connection(port, password, dbname, host, user):
-    """Создает соединение с базой данных в зависимости от типа"""
-    return psycopg2.connect(
-        dbname=dbname,
-        user=user,
-        password=password,
-        host=host,
-        port=port,
-        options = "-c client_encoding=utf8"
-    )
+        # Проверяем существование таблицы
+        cursor.execute("""
+            SELECT EXISTS (
+                SELECT FROM information_schema.tables 
+                WHERE table_name = 'migration'
+            );
+        """)
+        if not cursor.fetchone()[0]:
+            print("Таблица migration не существует")
+            return []
 
-connection = get_db_connection(PORT, PASSWORD, DBNAME, HOST, USER)
+        # Получаем все значения из колонки name
+        cursor.execute("SELECT name FROM migration")
+        return [row[0] for row in cursor.fetchall()]
+
+    except OperationalError as e:
+        print(f"Ошибка подключения к базе данных: {e}")
+        return []
+    finally:
+        if 'conn' in locals():
+            connection.close()
+
+
+connection = next(get_conn())
 
 def execute_sql_file(connection, filepath):
     """Выполняет SQL-скрипт из файла"""
@@ -31,12 +48,12 @@ def execute_sql_file(connection, filepath):
         print(f"Error executing {filepath}: {e}")
         raise
 
-
-
 if __name__ == "__main__":
-
-    for child in MIGRATION_PATH.iterdir():
-        execute_sql_file(connection, child)
+    for migration_file in sorted(MIGRATION_PATH.glob("*.sql")):
+        migration_name = migration_file.stem
+        if migration_name in get_migration_names(connection):
+            for child in MIGRATION_PATH.iterdir():
+                execute_sql_file(connection, child)
 
 
 
