@@ -12,7 +12,7 @@ class VacancyRepository:
         query = """ 
         INSERT INTO vacancy(id, name, salary, address, description, url)
         VALUES (%s,%s,%s,%s,%s,%s)
-        RETURNING name, salary, address, description, url
+        RETURNING id, name, salary, address, description, url
         """
         cursor.execute(query,values)
         result = cursor.fetchone()
@@ -21,7 +21,7 @@ class VacancyRepository:
         return dict(zip(columns, result))
 
 
-    def update(self, vacancy_id: UUID, new_values):
+    def update(self, values):
         cursor = self.connection.cursor()
         query = """
                 UPDATE vacancy 
@@ -33,7 +33,6 @@ class VacancyRepository:
                 WHERE id = %s
                 RETURNING id, name, salary, address, description, url
                 """
-        values = new_values + (vacancy_id, )
         cursor.execute(query, values)
         result = cursor.fetchone()
         self.connection.commit()
@@ -42,7 +41,7 @@ class VacancyRepository:
 
     def delete(self, vacancy_id: UUID):
         cursor = self.connection.cursor()
-        cursor.execute("DELETE FROM vacancy WHERE id = %s", (vacancy_id,))
+        cursor.execute("DELETE FROM vacancy WHERE id = %s", (str(vacancy_id),))
         self.connection.commit()
 
     def get(self, vacancy_id: UUID):

@@ -18,5 +18,3 @@ def get_conn():
         yield conn
     finally:
         connection_pool.putconn(conn)
-
-#conn = get_conn()
