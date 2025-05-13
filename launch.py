@@ -1,5 +1,4 @@
-import psycopg2
-from src.settings import PORT, PASSWORD, DBNAME, HOST, USER, MIGRATION_PATH
+from src.settings import MIGRATION_PATH
 from psycopg2 import OperationalError
 from src.config.database import get_conn
 
@@ -31,8 +30,6 @@ def get_migration_names(connection):
             connection.close()
 
 
-connection = next(get_conn())
-
 def execute_sql_file(connection, filepath):
     """Выполняет SQL-скрипт из файла"""
     with open(filepath, 'r', encoding='utf-8') as sql_file:
@@ -49,6 +46,7 @@ def execute_sql_file(connection, filepath):
         raise
 
 if __name__ == "__main__":
+    connection = next(get_conn())
     for migration_file in sorted(MIGRATION_PATH.glob("*.sql")):
         migration_name = migration_file.stem
         if migration_name in get_migration_names(connection):

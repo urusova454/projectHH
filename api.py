@@ -1,5 +1,3 @@
-from pprint import pprint
-
 import requests  # Для запросов по API
 from src.domain.vacancies import Vacancy
 from uuid import uuid4

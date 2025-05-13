@@ -1,7 +1,6 @@
 from src.repos.vacancies import VacancyRepository
 from src.config.database import get_conn
 from fastapi import Depends, FastAPI, status, HTTPException
-from pydantic import BaseModel
 from uuid import UUID, uuid4
 from src.web.schemas.vacancy import VacancySchema
 from src.web.dependencies.vacancy import VacancyList
@@ -18,7 +17,7 @@ def get_all_vacancies(conn = Depends(get_conn)):
     vacancy_repo = VacancyRepository(conn)
     vacancies = vacancy_repo.get_all()
     vacancies_data = [Vacancy.model_validate(v) for v in vacancies]
-    return {"vacancies": vacancies_data}
+    return VacancyList(vacancies=vacancies_data)
 
 @app.get(
     "/vacancies/{vacancy_id}",
@@ -34,7 +33,7 @@ def get_vacancy(vacancy_id: UUID, conn = Depends(get_conn)):
             status_code=status.HTTP_400_BAD_REQUEST,
             detail=f"Вакансии с UUID: '{vacancy_id}' не существует"
         )
-    return vacancy
+    return Vacancy(**vacancy)
 
 @app.post(
     "/vacancies",
@@ -45,9 +44,8 @@ def get_vacancy(vacancy_id: UUID, conn = Depends(get_conn)):
 def create_vacancy(vacancy: VacancySchema, conn = Depends(get_conn)):
     id = uuid4()
     vacancy_repo = VacancyRepository(conn)
-    vacancy_repo.create((str(id),vacancy.name, vacancy.salary, vacancy.address, vacancy.description, vacancy.url))
-
-    return vacancy
+    new_vacancy = vacancy_repo.create((str(id),vacancy.name, vacancy.salary, vacancy.address, vacancy.description, vacancy.url))
+    return Vacancy(**new_vacancy)
 
 @app.put(
     "/vacancies/{vacancy_id}",
@@ -63,14 +61,15 @@ def update_vacancy(vacancy_id: UUID,vacancy: VacancySchema, conn = Depends(get_c
             detail=f"Вакансии с UUID: '{vacancy_id}' не существует"
         )
     new_values = (
+        str(vacancy_id),
         vacancy.name,
         vacancy.salary,
         vacancy.address,
         vacancy.description,
         vacancy.url
     )
-    vacancy = vacancy_repo.update(str(vacancy_id), new_values)
-    return vacancy
+    new_vacancy = vacancy_repo.update(new_values)
+    return Vacancy(**new_vacancy)
 
 @app.delete(
     "/vacancies/{vacancy_id}",
@@ -85,8 +84,8 @@ def delete_vacancy(vacancy_id: UUID, conn = Depends(get_conn)):
             status_code=status.HTTP_400_BAD_REQUEST,
             detail=f"Вакансии с UUID: '{vacancy_id}' не существует"
         )
-    vacancy = vacancy_repo.delete(str(vacancy_id))
-    return vacancy
+    vacancy_repo.delete(vacancy_id)
+
 
 
 

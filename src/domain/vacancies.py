@@ -9,4 +9,4 @@ class Vacancy(BaseModel):
     salary: Optional[Dict[str, Any]] = f(default=None, description="Зарплата")
     address: Optional[str] = f(default=None, description="Адрес")
     description: str = f(description="Описание")
-    url: Optional[str] = f(default=None, description="Ссылка на вакансию")
+    url: Optional[HttpUrl] = f(default=None, description="Ссылка на вакансию")
