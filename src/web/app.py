@@ -5,6 +5,7 @@ from uuid import UUID, uuid4
 from src.web.schemas.vacancy import VacancySchema
 from src.web.dependencies.vacancy import VacancyList
 from src.domain.vacancies import Vacancy
+
 app = FastAPI()
 
 @app.get(
@@ -44,7 +45,15 @@ def get_vacancy(vacancy_id: UUID, conn = Depends(get_conn)):
 def create_vacancy(vacancy: VacancySchema, conn = Depends(get_conn)):
     id = uuid4()
     vacancy_repo = VacancyRepository(conn)
-    new_vacancy = vacancy_repo.create((str(id),vacancy.name, vacancy.salary, vacancy.address, vacancy.description, vacancy.url))
+    values = (
+        str(id),
+        vacancy.name,
+        vacancy.salary,
+        vacancy.address,
+        vacancy.description,
+        str(vacancy.url)
+    )
+    new_vacancy = vacancy_repo.create(values)
     return Vacancy(**new_vacancy)
 
 @app.put(

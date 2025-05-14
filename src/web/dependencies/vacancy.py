@@ -1,6 +1,5 @@
 from dataclasses import dataclass
 from fastapi import Query
-from pydantic import BaseModel
 from src.domain.vacancies import Vacancy
 
 @dataclass

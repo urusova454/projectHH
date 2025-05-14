@@ -63,7 +63,7 @@ def save_to_excel(vacancy: list):
     df.to_excel('result.xlsx')
 
 def pars_hh():
-    file_path = 'page.html'
+    file_path = '../page.html'
 
     soup = parse_html_file(file_path)
     vacancy_links = extract_vacancy_links(soup)
