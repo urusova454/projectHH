@@ -18,3 +18,4 @@ def get_conn():
         yield conn
     finally:
         connection_pool.putconn(conn)
+connection = next(get_conn())

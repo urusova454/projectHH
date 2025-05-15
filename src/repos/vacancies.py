@@ -1,4 +1,4 @@
-from launch import connection
+from src.config.database import connection
 from uuid import UUID, uuid4
 
 
