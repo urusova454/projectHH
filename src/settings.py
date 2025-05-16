@@ -26,14 +26,12 @@ TIME_WAIT = 10
 HH_URL = "https://omsk.hh.ru/"
 ZARPLATA_URL = "https://chelyabinsk.zarplata.ru/"
 
+POSTGRES_HOST = os.getenv("POSTGRES_HOST")
+POSTGRES_USER = os.getenv("POSTGRES_USER")
+POSTGRES_DBNAME = os.getenv("POSTGRES_DBNAME")
+POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD")
+POSTGRES_PORT = "5432"
 
 
-
-HOST = "127.0.0.1"
-USER = "postgres"
-DBNAME = "hh_db"
-PASSWORD = "4023"
-PORT = "5432"
 BASE_PATH = Path(os.path.dirname(os.path.abspath(__file__)))
-print(BASE_PATH)
 MIGRATION_PATH = BASE_PATH / "repos" / "migrations"

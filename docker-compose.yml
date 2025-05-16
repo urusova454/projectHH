@@ -1,0 +1,47 @@
+services:
+  postgresql:
+    image: postgres:12.14
+    env_file:
+      - .env
+    security_opt:
+      - no-new-privileges:true
+    restart: always
+    ports:
+      - 127.0.0.1:5432:5432
+    volumes:
+      - hh-project:/var/lib/postgresql/data
+    networks:
+      - hh-local
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "postgres" ]
+      interval: 5s
+      timeout: 2s
+      retries: 1
+    read_only: true
+    tmpfs:
+      - /var/run/postgresql
+
+  hh-project:
+    restart: always
+    ports:
+      - 127.0.0.1:9999:9999
+    env_file:
+      - .env
+    security_opt:
+      - no-new-privileges:true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sh -c "python main.py"
+    depends_on:
+      - postgresql
+    networks:
+      - hh-local
+
+volumes:
+  hh-project:
+    driver: local
+
+networks:
+  hh-local:
+    name: hh-local
