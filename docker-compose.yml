@@ -3,6 +3,7 @@ services:
     image: postgres:12.14
     env_file:
       - .env
+
     security_opt:
       - no-new-privileges:true
     restart: always
@@ -34,7 +35,8 @@ services:
       dockerfile: Dockerfile
     command: sh -c "python main.py"
     depends_on:
-      - postgresql
+      postgresql:
+        condition: service_healthy
     networks:
       - hh-local
 

@@ -30,7 +30,7 @@ POSTGRES_HOST = os.getenv("POSTGRES_HOST")
 POSTGRES_USER = os.getenv("POSTGRES_USER")
 POSTGRES_DBNAME = os.getenv("POSTGRES_DBNAME")
 POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD")
-POSTGRES_PORT = "5432"
+POSTGRES_PORT = os.getenv("POSTGRES_PORT")
 
 
 BASE_PATH = Path(os.path.dirname(os.path.abspath(__file__)))
