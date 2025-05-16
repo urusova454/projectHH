@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import re
 import requests
 import pandas as pd
-from domain.vacancy import GeneralVacancy, Vacancy
+
 
 file_path = 'page.html'
 urls = set()
