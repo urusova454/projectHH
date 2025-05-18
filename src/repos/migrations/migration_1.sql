@@ -12,6 +12,6 @@ CREATE TABLE IF NOT EXISTS migrations (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255)
 );
-
+INSERT INTO migrations (name) VALUES ('migration_1.sql');
 
 COMMIT;

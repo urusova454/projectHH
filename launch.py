@@ -11,7 +11,7 @@ def get_migration_names(connection):
         cursor.execute("""
             SELECT EXISTS (
                 SELECT FROM information_schema.tables 
-                WHERE table_name = 'migration'
+                WHERE table_name = 'migrations'
             );
         """)
         if not cursor.fetchone()[0]:
@@ -19,7 +19,7 @@ def get_migration_names(connection):
             return []
 
         # Получаем все значения из колонки name
-        cursor.execute("SELECT name FROM migration")
+        cursor.execute("SELECT name FROM migrations")
         return [row[0] for row in cursor.fetchall()]
 
     except OperationalError as e:
@@ -47,11 +47,11 @@ def execute_sql_file(connection, filepath):
 
 if __name__ == "__main__":
     connection = next(get_conn())
-    for migration_file in sorted(MIGRATION_PATH.glob("*.sql")):
-        migration_name = migration_file.stem
-        if migration_name in get_migration_names(connection):
-            for child in MIGRATION_PATH.iterdir():
-                execute_sql_file(connection, child)
+    migration_names = get_migration_names(connection)
+    for migration in sorted(MIGRATION_PATH.iterdir()):
+        if migration.name not in migration_names:
+            execute_sql_file(connection, migration)
+
 
 
 
