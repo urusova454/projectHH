@@ -1,12 +1,22 @@
 from src.repos.vacancies import VacancyRepository
 from src.config.database import get_conn
-from fastapi import Depends, FastAPI, status, HTTPException
+from fastapi import Body,Depends, FastAPI, status, HTTPException
+from fastapi.responses import JSONResponse
 from uuid import UUID, uuid4
 from src.web.schemas.vacancy import VacancySchema
 from src.web.dependencies.vacancy import VacancyList
 from src.domain.vacancies import Vacancy
-
+from celery_worker import create_task
 app = FastAPI()
+
+
+@app.post("/ex1")
+def run_task(data=Body(...)):
+    amount = int(data["amount"])
+    x = data["x"]
+    y = data["y"]
+    task = create_task.delay(amount, x, y)
+    return JSONResponse({"Result": task.get()})
 
 @app.get(
     "/vacancies",

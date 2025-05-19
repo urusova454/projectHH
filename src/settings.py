@@ -35,3 +35,5 @@ POSTGRES_PORT = os.getenv("POSTGRES_PORT")
 
 BASE_PATH = Path(os.path.dirname(os.path.abspath(__file__)))
 MIGRATION_PATH = BASE_PATH / "repos" / "migrations"
+
+
